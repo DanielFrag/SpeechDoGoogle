@@ -1,7 +1,7 @@
 var reconhecimentoDeFala;
 var texto = document.getElementById("texto");
 
-if ( 'webkitSpeechRecognition' in window )
+if ("webkitSpeechRecognition" in window)
 {	
 	reconhecimentoDeFala = new webkitSpeechRecognition(); //objeto responsável pelo reconhecimento da fala
 	reconhecimentoDeFala.continuous = false; //atributo que indica se a fala continuará sendo monitorada após o recebimento completo do primeiro resultado
@@ -18,7 +18,7 @@ if ( 'webkitSpeechRecognition' in window )
 function fimDaTranscricao ()
 {
 	console.log("fim da transcricao");
-    setTimeout(function (){ console.log("tentando reiniciar"); reconhecimentoDeFala.start(); } , 10);
+	setTimeout(function (){ console.log("tentando reiniciar"); reconhecimentoDeFala.start(); } , 10);
 }
 
 //exibe o resultado da transcrição
